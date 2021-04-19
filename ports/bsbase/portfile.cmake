@@ -12,7 +12,7 @@ vcpkg_configure_cmake (
 )
 
 vcpkg_install_cmake ()
-vcpkg_fixup_cmake_targets ()
+vcpkg_cmake_config_fixup ()
 
 file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
 
