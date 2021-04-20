@@ -1,3 +1,5 @@
+set (VCPKG_BUILD_TYPE ${CMAKE_BUILD_TYPE})
+
 vcpkg_from_github (
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO blAs1N/BSBase
@@ -12,8 +14,6 @@ vcpkg_configure_cmake (
 )
 
 vcpkg_install_cmake ()
-
-message ("Type: ${VCPKG_BUILD_TYPE}")
 vcpkg_fixup_cmake_targets ()
 
 file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
