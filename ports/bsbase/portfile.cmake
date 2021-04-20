@@ -1,5 +1,3 @@
-set (VCPKG_BUILD_TYPE ${CMAKE_BUILD_TYPE})
-
 vcpkg_from_github (
 	OUT_SOURCE_PATH SOURCE_PATH
 	REPO blAs1N/BSBase
