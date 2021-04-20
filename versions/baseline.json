@@ -1,5 +1,6 @@
 {
     "default": {
-        "bsbase": { "baseline": "0.1.0", "port-version": 0 }
+        "bsbase": { "baseline": "0.1.0", "port-version": 0 },
+        "bsmath": { "baseline": "0.1.0", "port-version": 0 }
     }
 }
