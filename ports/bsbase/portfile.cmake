@@ -14,7 +14,14 @@ vcpkg_configure_cmake (
 vcpkg_install_cmake ()
 vcpkg_fixup_cmake_targets ()
 
-file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
+file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
+
+file(GLOB DEBUGS "${CURRENT_PACKAGES_DIR}/debug")
+list(LENGTH DEBUGS DEBUG_LEN)
+
+if(DEBUG_LEN EQUAL 0)
+	file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug")
+endif()
 
 configure_file (
     "${SOURCE_PATH}/LICENSE"
