@@ -16,7 +16,7 @@ vcpkg_fixup_cmake_targets ()
 
 file (REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
-file(GLOB DEBUGS "${CURRENT_PACKAGES_DIR}/debug")
+file(GLOB DEBUGS "${CURRENT_PACKAGES_DIR}/debug/")
 list(LENGTH DEBUGS DEBUG_LEN)
 
 if(DEBUG_LEN EQUAL 0)
